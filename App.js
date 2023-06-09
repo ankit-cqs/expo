@@ -1,25 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Button,HStack, Banner } from "@react-native-material/core";
+import { StatusBar } from "expo-status-bar";
+import { SafeAreaView, StyleSheet, View } from "react-native";
+import { Button, HStack, Banner, Stack, Text } from "@react-native-material/core";
+import TrainSearch from "./components /TrainSearch/TrainSearch";
+import TrainInfo from "./components /TrainInfo/TrainInfo";
 
 export default function App() {
   return (
-    <View>
-      <Text>Track My Train</Text>
-      <StatusBar style="auto" />
-      <Banner
-    text="There was a problem processing a transaction on your credit card."
-    buttons={
-      <HStack spacing={2}>
-        <Button key="fix-it" variant="text" title="Fix it" compact />
-        <Button key="learn-more" variant="text" title="Learn More" compact />
-      </HStack>
-    }
-  />
+    <SafeAreaView style={{marginTop: 30}}>
+    <View >
 
-      <Button title="Start working" />
+      <StatusBar  />
+
+      <Text variant="button" style={{textAlign: 'center', fontWeight: 'bold',
+    fontSize: 18,
+    marginTop: 0,
+    backgroundColor: 'yellow',}}>Track My Train</Text>
+      
+
+      <TrainSearch />
+     <TrainInfo />
     </View>
+    </SafeAreaView>
   );
 }
-
-
