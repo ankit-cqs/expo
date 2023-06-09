@@ -10,11 +10,12 @@ const TrainSearch = () => {
           backgroundColor="#1C50D0"
           inputStyle={{color: 'white', textColor: 'white'}}
           style={{ borderRadius: 40, color: "white" }}
-      label="Where is my train?"
+      label="Where is my noew train?"
       trailing={props => (
         <IconButton icon={props => <Icon name="train" {...props} />} {...props} />
       )}
     />
+    
         </View>
     )
 }
